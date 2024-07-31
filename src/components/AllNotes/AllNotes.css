@@ -1,15 +1,17 @@
-.AllNotes{
+.AllNotes {
     display: flex;
     align-items: center;
-    margin-top: 10rem ;
+    margin-top: 10rem;
 }
-.AllNotes__list{
+
+.AllNotes__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     font-size: 3rem;
 }
-.AllNotes__list-item{
+
+.AllNotes__list-item {
     flex-basis: 33%;
     max-width: 31.2%;
     margin: 1rem;
@@ -18,4 +20,22 @@
     height: 9.2rem;
     overflow: hidden;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .AllNotes__list-item {
+        flex-basis: 50%;
+        max-width: 45%;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+    .AllNotes__list-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
 }
