@@ -22,8 +22,8 @@ export default function AddNew({ addNewNote }) {
     }
 
     const colorClickHandler = e => {
-        const maionColor = e.target.attributes['color'].value
-        setInputColor(maionColor)
+        const mainColor = e.target.attributes['color'].value
+        setInputColor(mainColor)
     }
 
     return (

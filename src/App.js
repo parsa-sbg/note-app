@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import AddNew from './components/AddNew/AddNew';
 import AllNotes from './components/AllNotes/AllNotes';
@@ -6,6 +6,16 @@ import AllNotes from './components/AllNotes/AllNotes';
 function App() {
 
   const [allNotesList, setAllNotesList] = useState([])
+
+  useEffect(() => {
+    const storedNotes = localStorage.getItem('notes')
+    storedNotes && setAllNotesList(JSON.parse(storedNotes))
+  },[])
+
+  useEffect(() => {
+    console.log(allNotesList);
+    localStorage.setItem('notes', JSON.stringify(allNotesList))
+  } ,[allNotesList])
 
   const addNewNote = (noteTitle, noteColor) => {
     const newNote = {
