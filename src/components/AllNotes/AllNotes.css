@@ -18,8 +18,13 @@
     text-wrap: wrap;
     border: 1px solid black;
     height: 9.2rem;
-    overflow: hidden;
+    overflow: scroll;
     cursor: pointer;
+
+
+}
+.AllNotes__list-item::-webkit-scrollbar {
+    display: none;
 }
 
 @media only screen and (max-width: 1100px) {
