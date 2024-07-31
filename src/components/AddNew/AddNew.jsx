@@ -20,7 +20,7 @@ export default function AddNew( {addNewNote} ) {
 
     return (
         <div className='addnew'>
-            <input onChange={inputChangeHandler} value={noteTitle} className='AllNotes__input' type="text" />
+            <textarea onChange={inputChangeHandler} value={noteTitle} className='AllNotes__input' type="text" />
             <button onClick={btnClickHandler} className='AllNotes__btn'>add new note</button>
         </div>
     )

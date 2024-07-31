@@ -5,9 +5,23 @@
     flex-direction: column;
 }
 .AllNotes__input{
-
+    min-height: 4rem;
+    width: 28rem;
+    max-height: 12rem;
     outline: none;
+    resize: vertical;
 }
 .AllNotes__btn{
     margin-top: 2rem;
+    height: 4rem;
+    width: 28rem;
+    border: 1px solid var(--main-color);
+    transition: all 200ms linear;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.AllNotes__btn:hover{
+    background-color: var(--main-color);
+    color: aliceblue;
 }
