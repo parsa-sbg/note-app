@@ -1,16 +1,21 @@
 .AllNotes{
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 10rem ;
 }
 .AllNotes__list{
-    list-style: circle;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-wrap: wrap;
     font-size: 3rem;
 }
 .AllNotes__list-item{
-
+    flex-basis: 33%;
+    max-width: 31.2%;
+    margin: 1rem;
+    text-wrap: wrap;
+    border: 1px solid black;
+    height: 9.2rem;
+    overflow: hidden;
+    cursor: pointer;
 }

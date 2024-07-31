@@ -5,9 +5,9 @@ export default function AllNotes({notes}) {
 
   return (
     <div className='AllNotes'>
-      <ul className='AllNotes__list'>
-        {notes.map(note => <li key={note.id} className='AllNotes__list-item'>{note.title}</li>)}
-      </ul>
+      <div className='AllNotes__list'>
+        {notes.map(note => <div key={note.id} className='AllNotes__list-item'>{note.title}</div>)}
+      </div>
     </div>
   )
 }
