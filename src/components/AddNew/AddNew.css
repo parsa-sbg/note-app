@@ -20,12 +20,20 @@
     border: 1px solid black;
 }
 
+.AllNotes__input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
 .AllNotes__input{
     min-height: 4rem;
     width: 28rem;
     max-height: 12rem;
     outline: none;
     resize: vertical;
+}
+.AllNotes__input-maxlength{
+    text-align: end;
+    margin-top: .5rem;
 }
 .AllNotes__btn{
     height: 4rem;

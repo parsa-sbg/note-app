@@ -25,10 +25,14 @@ function App() {
     setAllNotesList(prevNotes => [...prevNotes, newNote])
   }, [])
 
+  const DeleteNote = useCallback((noteId) => {    
+    setAllNotesList(prevNotes => prevNotes.filter(note => note.id !== noteId))
+  }, [])
+
   return (
     <div className="App">
       <AddNew addNewNote={addNewNote}></AddNew>
-      <AllNotes notes={allNotesList} ></AllNotes>
+      <AllNotes DeleteNote={DeleteNote} notes={allNotesList} ></AllNotes>
     </div>
   );
 }
