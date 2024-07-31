@@ -7,10 +7,11 @@ function App() {
 
   const [allNotesList, setAllNotesList] = useState([])
 
-  const addNewNote = (noteTitle) => {
+  const addNewNote = (noteTitle, noteColor) => {
     const newNote = {
       id: allNotesList.length + 1,
-      title: noteTitle
+      title: noteTitle,
+      color: noteColor
     }
     setAllNotesList(prevNotes => [...prevNotes, newNote])
   }

@@ -3,7 +3,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
 }
+
+.addnew__colors{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.addnew__color{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 .AllNotes__input{
     min-height: 4rem;
     width: 28rem;
@@ -12,7 +28,6 @@
     resize: vertical;
 }
 .AllNotes__btn{
-    margin-top: 2rem;
     height: 4rem;
     width: 28rem;
     border: 1px solid var(--main-color);
