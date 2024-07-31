@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import AddNew from './components/AddNew/AddNew';
 import AllNotes from './components/AllNotes/AllNotes';
@@ -10,21 +10,20 @@ function App() {
   useEffect(() => {
     const storedNotes = localStorage.getItem('notes')
     storedNotes && setAllNotesList(JSON.parse(storedNotes))
-  },[])
+  }, [])
 
   useEffect(() => {
-    console.log(allNotesList);
     localStorage.setItem('notes', JSON.stringify(allNotesList))
-  } ,[allNotesList])
+  }, [allNotesList])
 
-  const addNewNote = (noteTitle, noteColor) => {
+  const addNewNote = useCallback((noteTitle, noteColor) => {
     const newNote = {
-      id: allNotesList.length + 1,
+      id: Date.now(),
       title: noteTitle,
       color: noteColor
     }
     setAllNotesList(prevNotes => [...prevNotes, newNote])
-  }
+  }, [])
 
   return (
     <div className="App">

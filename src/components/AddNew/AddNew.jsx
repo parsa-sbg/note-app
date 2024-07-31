@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import './AddNew.css'
 
 export default function AddNew({ addNewNote }) {
@@ -10,28 +10,28 @@ export default function AddNew({ addNewNote }) {
     const [inputColor, setInputColor] = useState('#fff')
 
 
-    const inputChangeHandler = e => {
+    const inputChangeHandler = useCallback(e => {
         setNoteTitle(e.target.value)
-    }
+    }, [])
 
-    const btnClickHandler = () => {
+    const btnClickHandler = useCallback(() => {
         if (noteTitle.trim()) {
             addNewNote(noteTitle.trim(), inputColor)
             setNoteTitle('')
         }
-    }
+    }, [inputColor, noteTitle])
 
-    const colorClickHandler = e => {
-        const mainColor = e.target.attributes['color'].value
+    const colorClickHandler = useCallback(e => {
+        const mainColor = e.target.attributes['data-color'].value
         setInputColor(mainColor)
-    }
+    }, [])
 
     return (
         <div className='addnew'>
             <textarea style={{ backgroundColor: inputColor }} onChange={inputChangeHandler} value={noteTitle} className='AllNotes__input' type="text" />
             <div className='addnew__colors'>
                 {colors.map(color =>
-                    <div key={color} onClick={colorClickHandler} color={color} style={{ backgroundColor: color }} className='addnew__color'></div>
+                    <div key={color} onClick={colorClickHandler} data-color={color} style={{ backgroundColor: color }} className='addnew__color'></div>
                 )}
             </div>
             <button onClick={btnClickHandler} className='AllNotes__btn'>add new note</button>
