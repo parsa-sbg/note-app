@@ -1,0 +1,16 @@
+.AllNotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem ;
+}
+.AllNotes__list{
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 3rem;
+}
+.AllNotes__list-item{
+
+}

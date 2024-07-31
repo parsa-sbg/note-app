@@ -1,0 +1,13 @@
+.addnew{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.AllNotes__input{
+
+    outline: none;
+}
+.AllNotes__btn{
+    margin-top: 2rem;
+}
