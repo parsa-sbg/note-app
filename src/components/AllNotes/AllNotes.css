@@ -1,7 +1,9 @@
-.AllNotes {
-    display: flex;
-    align-items: center;
+.allNotes{
     margin-top: 10rem;
+}
+.allNotes__title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .AllNotes__list {
@@ -9,6 +11,13 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 3rem;
 }
 
 .AllNotes__list-item {
@@ -25,6 +34,7 @@
 
 
 }
+
 .AllNotes__list-item::-webkit-scrollbar {
     display: none;
 }

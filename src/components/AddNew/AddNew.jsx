@@ -36,7 +36,7 @@ export default memo(function AddNew({ addNewNote }) {
 
             <div className='addnew'>
                 <div className='addnew__input-wrapper'>
-                    <textarea style={{ backgroundColor: inputColor }} onChange={inputChangeHandler} value={noteTitle} className='addnew__input' type="text" />
+                    <textarea placeholder='write your note... ' style={{ backgroundColor: inputColor }} onChange={inputChangeHandler} value={noteTitle} className='addnew__input' type="text" />
                     <span className='addnew__input-maxlength'>{noteTitle.length}/{inputMaxLength}</span>
                 </div>
 
