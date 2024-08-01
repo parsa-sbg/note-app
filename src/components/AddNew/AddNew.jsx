@@ -1,13 +1,13 @@
-import React, { useCallback, useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 import './AddNew.css'
 
-export default function AddNew({ addNewNote }) {
+export default memo(function AddNew({ addNewNote }) {
 
 
     const [noteTitle, setNoteTitle] = useState('')
     const [colors, setColors] = useState(['#fff', '#00e5ffaa', '#ff0000aa', '#3700ffa0', '#bcf001a0'])
     const [inputColor, setInputColor] = useState('#fff')
-    const [inputMaxLength, setInputMaxLength] = useState (76)
+    const [inputMaxLength, setInputMaxLength] = useState(76)
 
 
 
@@ -41,4 +41,4 @@ export default function AddNew({ addNewNote }) {
             <button onClick={btnClickHandler} className='AllNotes__btn'>add new note</button>
         </div>
     )
-}
+})
