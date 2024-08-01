@@ -1,4 +1,4 @@
-.addnew{
+.addnew {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,13 +6,13 @@
     gap: 2rem;
 }
 
-.addnew__colors{
+.addnew__colors {
     display: flex;
     gap: 1rem;
 
 }
 
-.addnew__color{
+.addnew__color {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -20,22 +20,70 @@
     border: 1px solid black;
 }
 
-.AllNotes__input-wrapper{
+.addnew__custom-color-wrapper{
+    display: flex;
+    align-items: center;
+}
+.addnew__custom-color-label{
+
+}
+
+.addnew__colorinput-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+.addnew__colorinput {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    /* Makes it circular */
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.addnew__colorinput::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.addnew__colorinput::-webkit-color-swatch {
+    border: none;
+    /* border-radius: 50%; */
+}
+
+
+
+
+
+.AllNotes__input-wrapper {
     display: flex;
     flex-direction: column;
 }
-.AllNotes__input{
+
+.AllNotes__input {
     min-height: 4rem;
     width: 28rem;
     max-height: 12rem;
     outline: none;
     resize: vertical;
 }
-.AllNotes__input-maxlength{
+
+.AllNotes__input-maxlength {
     text-align: end;
     margin-top: .5rem;
 }
-.AllNotes__btn{
+
+.AllNotes__btn {
     height: 4rem;
     width: 28rem;
     border: 1px solid var(--main-color);
@@ -44,7 +92,7 @@
     cursor: pointer;
 }
 
-.AllNotes__btn:hover{
+.AllNotes__btn:hover {
     background-color: var(--main-color);
     color: aliceblue;
 }

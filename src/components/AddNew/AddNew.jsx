@@ -27,6 +27,10 @@ export default memo(function AddNew({ addNewNote }) {
         setInputColor(mainColor)
     }, [])
 
+    const customColorChangeHandler = useCallback((e) => {
+        setInputColor(e.target.value)
+    }, [])
+
     return (
         <div className='addnew'>
             <div className='AllNotes__input-wrapper'>
@@ -37,6 +41,12 @@ export default memo(function AddNew({ addNewNote }) {
                 {colors.map(color =>
                     <div key={color} onClick={colorClickHandler} data-color={color} style={{ backgroundColor: color }} className='addnew__color'></div>
                 )}
+                <div className='addnew__custom-color-wrapper'>
+                    <span className='addnew__custom-color-label'>use custom color:</span>
+                    <div className='addnew__colorinput-wrapper'>
+                        <input onChange={customColorChangeHandler} className='addnew__colorinput' type="color" />
+                    </div>
+                </div>
             </div>
             <button onClick={btnClickHandler} className='AllNotes__btn'>add new note</button>
         </div>
