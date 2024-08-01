@@ -19,6 +19,7 @@
     resize: vertical;
     font-size: 2rem;
     padding: .5rem;
+    background-color: var(--app-bg-color);
 }
 
 .addnew__input-maxlength {
@@ -34,6 +35,8 @@
     background-color: transparent;
     cursor: pointer;
     border-radius: 1rem;
+    color: var(--text-color);
+    background-color: var(--box-bg);
 }
 
 .addnew__btn:hover {
@@ -54,6 +57,7 @@
     justify-content: center;
     display: flex;
     border-radius: 1rem;
+    background-color: var(--box-bg);
 }
 
 .options__item{
@@ -61,7 +65,7 @@
     padding: 2rem;
     max-width: fit-content;
     border-radius: 1rem;
-
+    background-color: var(--app-bg-color);
 }
 
 

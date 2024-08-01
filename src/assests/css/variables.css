@@ -1,3 +1,17 @@
 :root{
     --main-color: #0977ed;
+    --app-bg-color: #edf0f2;
+
+    --border-color: #000;
+    --text-color: #000000;
+    --box-bg: #fff;
+}
+
+:root{
+    --main-color: #0977ed;
+    --app-bg-color: #111827;
+
+    --border-color: #000;
+    --text-color: #fff;
+    --box-bg: #242a38;
 }
