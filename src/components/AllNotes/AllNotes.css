@@ -12,13 +12,14 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 3rem;
+    justify-content: center;
 
     display: flex;
     align-items: center;
 
     border: 3px solid black;
     border-radius: 1rem;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .AllNotes__list-item {
@@ -54,6 +55,9 @@
     .AllNotes__list-item {
         flex-basis: 100%;
         max-width: 100%;
+    }
+    .AllNotes__list{
+        padding: 0rem;
     }
 
 }
