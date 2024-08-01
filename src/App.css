@@ -1,15 +1,26 @@
-.App{
+body {
+    margin: 0;
+
+    font-size: 1.6rem;
+
+}
+
+.App {
     padding: 5rem;
+    background-color: var(--app-bg-color);
+    color: var(--text-color) !important;
+    min-height: 100vh;
+    transition: background-color 200ms linear;
 }
 
 @media only screen and (max-width: 1100px) {
-    .App{
+    .App {
         padding: 5rem 3rem;
     }
 }
 
 @media only screen and (max-width: 750px) {
-    .App{
+    .App {
         padding: 5rem 1rem;
     }
 }

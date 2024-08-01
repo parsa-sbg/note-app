@@ -11,11 +11,3 @@
   box-sizing: border-box;
 }
 
-
-body {
-  margin: 0;
-  
-  font-size: 1.6rem;
-  background-color: var(--app-bg-color);
-  color: var(--text-color) !important;
-}

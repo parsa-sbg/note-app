@@ -64,9 +64,28 @@
 .options__item{
     border: 1px solid black;
     padding: 2rem;
-    max-width: fit-content;
+    width: fit-content;
     border-radius: 1rem;
     background-color: var(--app-bg-color);
+    width: 100%;
+}
+
+.theme-option{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.theme-option__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    border-radius: 100%;
+    padding: .5rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
 }
 
 

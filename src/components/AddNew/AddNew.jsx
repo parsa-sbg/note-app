@@ -1,12 +1,15 @@
 import React, { memo, useCallback, useState } from 'react'
 import './AddNew.css'
+import { FaRegMoon } from "react-icons/fa";
+import { FaRegSun } from "react-icons/fa";
 
-export default memo(function AddNew({ addNewNote }) {
+
+export default memo(function AddNew({ addNewNote, isDark, changeTheme }) {
 
 
     const [noteTitle, setNoteTitle] = useState('')
     const [boxColors, setBoxColors] = useState(['#fff', '#00e5ffaa', '#ff0000aa', '#3700ffa0', '#bcf001a0'])
-    const [textColors, setTextColors] = useState(['#000', '#00e5ffaa', '#ff0000aa', '#3700ffa0', '#bcf001a0'])
+    const [textColors, setTextColors] = useState(['#000', '#f00', '#0f0', '#00f', '#ffdd00'])
     const [inputColor, setInputColor] = useState('#fff')
     const [inputMaxLength, setInputMaxLength] = useState(76)
     const [inputTextColor, setInputTextColor] = useState('#000')
@@ -92,6 +95,15 @@ export default memo(function AddNew({ addNewNote }) {
                                 <input onChange={customTextColorChangeHandler} className='option__colorinput' type="color" />
                             </div>
                         </div>
+                    </div>
+
+                </div>
+
+                <div className='options__item'>
+
+                    <div className='theme-option'>
+                        <h3 className='option__title'>app theme: </h3>
+                        <button onClick={changeTheme} className='theme-option__btn'>{isDark ? (<FaRegMoon color='var(--text-color)' size={20} />) : <FaRegSun size={20} />}</button>
                     </div>
 
                 </div>

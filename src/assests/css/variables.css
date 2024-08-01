@@ -1,4 +1,4 @@
-:root{
+.App{
     --main-color: #0977ed;
     --app-bg-color: #edf0f2;
 
@@ -7,11 +7,11 @@
     --box-bg: #fff;
 }
 
-/* :root{
-    --main-color: #0977ed;
-    --app-bg-color: #111827;
+.App.dark {
+    --main-color: #0977ed !important;
+    --app-bg-color: #111827 !important;
 
-    --border-color: #000;
-    --text-color: #fff;
-    --box-bg: #242a38;
-} */
+    --border-color: #000 !important;
+    --text-color: #fff !important;
+    --box-bg: #242a38 !important;
+}
