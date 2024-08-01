@@ -2,7 +2,6 @@ import React from 'react'
 import './AllNotes.css'
 
 export default function AllNotes({ notes, DeleteNote }) {
-
   return (
 
     <div className='allNotes'>
@@ -12,7 +11,7 @@ export default function AllNotes({ notes, DeleteNote }) {
         {notes.map(note =>
           <div
             onClick={() => { DeleteNote(note.id) }}
-            style={{ backgroundColor: note.color }}
+            style={{ backgroundColor: note.color, color:note.textColor }}
             key={note.id}
             className='AllNotes__list-item'>
             {note.title}

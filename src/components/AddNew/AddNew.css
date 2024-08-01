@@ -58,6 +58,7 @@
     display: flex;
     border-radius: 1rem;
     background-color: var(--box-bg);
+    flex-wrap: wrap;
 }
 
 .options__item{
@@ -82,11 +83,17 @@
     font-weight: bold;
 }
 
-.option {
+.options {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 1rem;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .option__default-colors{
@@ -169,6 +176,9 @@
     }
     .addnew__btn{
         width: 100%;
+    }
+    .options {
+        flex-direction: row;
     }
 }
 

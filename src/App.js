@@ -16,11 +16,12 @@ function App() {
     localStorage.setItem('notes', JSON.stringify(allNotesList))
   }, [allNotesList])
 
-  const addNewNote = useCallback((noteTitle, noteColor) => {
+  const addNewNote = useCallback((noteTitle, noteColor, noteTextColor) => {
     const newNote = {
       id: Date.now(),
       title: noteTitle,
-      color: noteColor
+      color: noteColor,
+      textColor: noteTextColor
     }
     setAllNotesList(prevNotes => [...prevNotes, newNote])
   }, [])
