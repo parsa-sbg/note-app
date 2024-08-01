@@ -11,6 +11,7 @@
 }
 
 .addnew__input {
+    border-radius: 1rem;
     min-height: 4rem;
     width: 28rem;
     max-height: 12rem;
@@ -30,6 +31,7 @@
     transition: all 200ms linear;
     background-color: transparent;
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .addnew__btn:hover {
@@ -49,12 +51,15 @@
     border: 1px solid black;
     justify-content: center;
     display: flex;
+    border-radius: 1rem;
 }
 
 .options__item{
     border: 1px solid black;
     padding: 2rem;
     max-width: fit-content;
+    border-radius: 1rem;
+
 }
 
 

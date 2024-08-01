@@ -17,9 +17,11 @@
     margin: 1rem;
     text-wrap: wrap;
     border: 1px solid black;
-    height: 9.2rem;
+    height: 10.2rem;
     overflow: scroll;
     cursor: pointer;
+    border-radius: 1rem;
+    padding: .5rem;
 
 
 }
