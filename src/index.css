@@ -5,6 +5,12 @@
   font-size: 10px;
 }
 
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
 
 body {
   margin: 0;

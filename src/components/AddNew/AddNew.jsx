@@ -32,23 +32,41 @@ export default memo(function AddNew({ addNewNote }) {
     }, [])
 
     return (
-        <div className='addnew'>
-            <div className='AllNotes__input-wrapper'>
-                <textarea style={{ backgroundColor: inputColor }} onChange={inputChangeHandler} value={noteTitle} className='AllNotes__input' type="text" />
-                <span className='AllNotes__input-maxlength'>{noteTitle.length}/{inputMaxLength}</span>
-            </div>
-            <div className='addnew__colors'>
-                {colors.map(color =>
-                    <div key={color} onClick={colorClickHandler} data-color={color} style={{ backgroundColor: color }} className='addnew__color'></div>
-                )}
-                <div className='addnew__custom-color-wrapper'>
-                    <span className='addnew__custom-color-label'>use custom color:</span>
-                    <div className='addnew__colorinput-wrapper'>
-                        <input onChange={customColorChangeHandler} className='addnew__colorinput' type="color" />
-                    </div>
+        <div className='addnew-container'>
+
+            <div className='addnew'>
+                <div className='addnew__input-wrapper'>
+                    <textarea style={{ backgroundColor: inputColor }} onChange={inputChangeHandler} value={noteTitle} className='addnew__input' type="text" />
+                    <span className='addnew__input-maxlength'>{noteTitle.length}/{inputMaxLength}</span>
                 </div>
+
+                <button onClick={btnClickHandler} className='addnew__btn'>add new note</button>
             </div>
-            <button onClick={btnClickHandler} className='AllNotes__btn'>add new note</button>
+
+            <div className='options'>
+
+                <div className='options__item'>
+
+                    <div className='option'>
+                        <h3 className='option__title'>box color: </h3>
+                        <div className='option__default-colors'>
+                            {colors.map(color =>
+                                <div key={color} onClick={colorClickHandler} data-color={color} style={{ backgroundColor: color }} className='option__color'></div>
+                            )}
+                        </div>
+
+                        <div className='option__custom-color-wrapper'>
+                            <span className='option__custom-color-label'>use custom color:</span>
+                            <div className='option__colorinput-wrapper'>
+                                <input onChange={customColorChangeHandler} className='option__colorinput' type="color" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
+
     )
 })

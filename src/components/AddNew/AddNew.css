@@ -1,4 +1,65 @@
+.addnew-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* start add new */
+
+.addnew__input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.addnew__input {
+    min-height: 4rem;
+    width: 28rem;
+    max-height: 12rem;
+    outline: none;
+    resize: vertical;
+}
+
+.addnew__input-maxlength {
+    text-align: end;
+    margin-top: .5rem;
+}
+
+.addnew__btn {
+    height: 4rem;
+    width: 28rem;
+    border: 1px solid var(--main-color);
+    transition: all 200ms linear;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.addnew__btn:hover {
+    background-color: var(--main-color);
+    color: aliceblue;
+}
+
+/* end add new */
+
+
+
+
+/* start options */
+
+.options{
+    padding: 1rem;
+    border: 1px solid black;
+    justify-content: center;
+    display: flex;
+}
+
+.options__item{
+    border: 1px solid black;
+    padding: 2rem;
+    max-width: fit-content;
+}
+
+
 .addnew {
+    flex-basis: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,13 +67,24 @@
     gap: 2rem;
 }
 
-.addnew__colors {
-    display: flex;
-    gap: 1rem;
-
+.option__title{
+    font-weight: bold;
 }
 
-.addnew__color {
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.option__default-colors{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.option__color {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -20,15 +92,18 @@
     border: 1px solid black;
 }
 
-.addnew__custom-color-wrapper{
+
+.option__custom-color-wrapper{
     display: flex;
     align-items: center;
+    gap: 7.5px;
+    width: 100%;
 }
-.addnew__custom-color-label{
+.option__custom-color-label{
 
 }
 
-.addnew__colorinput-wrapper {
+.option__colorinput-wrapper {
     position: relative;
     display: inline-block;
     width: 2rem;
@@ -38,7 +113,7 @@
 }
 
 
-.addnew__colorinput {
+.option__colorinput {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -52,47 +127,42 @@
     background-color: transparent;
 }
 
-.addnew__colorinput::-webkit-color-swatch-wrapper {
+.option__colorinput::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
-.addnew__colorinput::-webkit-color-swatch {
+.option__colorinput::-webkit-color-swatch {
     border: none;
     /* border-radius: 50%; */
 }
+/* end options */
 
 
 
 
 
-.AllNotes__input-wrapper {
-    display: flex;
-    flex-direction: column;
+/*//////////////////////////// responsive /////////////////////////////////*/
+
+@media only screen and (max-width:700px) {
+    .addnew-container{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: auto;
+    }
+    .addnew__input-wrapper{
+        width: 100%;
+    }
+    .addnew__input{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .addnew__btn{
+        width: 100%;
+    }
 }
 
-.AllNotes__input {
-    min-height: 4rem;
-    width: 28rem;
-    max-height: 12rem;
-    outline: none;
-    resize: vertical;
-}
-
-.AllNotes__input-maxlength {
-    text-align: end;
-    margin-top: .5rem;
-}
-
-.AllNotes__btn {
-    height: 4rem;
-    width: 28rem;
-    border: 1px solid var(--main-color);
-    transition: all 200ms linear;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.AllNotes__btn:hover {
-    background-color: var(--main-color);
-    color: aliceblue;
+@media only screen and (max-width:500px) {
+    .addnew-container{
+        width: 95%;
+    }
 }
